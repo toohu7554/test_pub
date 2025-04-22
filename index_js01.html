@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScriptの基本文法: </title>
+</head>
+<body>
+    <p>Javascriptの変数と定数の性質について。</p>
+
+    <script>
+        'use strict'; // "use stript"; でもいい
+
+        let data; // 変数には特定の型は定義されていない
+        console.log(`初期値代入前: data = ${data}`);
+
+        /*
+         * データには型が割り当てられている
+         *  文字列型: "abcd" 'abcd' どちらでもOK
+         */
+
+         data = "My name is \"Bob\"! "; // c言語でもやった方法。" を \ でエスケープする。
+         console.log(data); 
+         data = 'My name is Bob"! ';
+        console.log(data);
+
+        data = 'It\'s a pen'; // \ を使うのは面倒
+        console.log(data);
+        data = "It's a pen "; // \を使わない方法がある
+        console.log(data);
+
+        data = "My name is \"Bob\"! He said \"It's a pen.\"";
+        console.log(data);
+        data = ' My name is "Bob"! Hesaid"It\'s a pen."';
+        console.log(data);
+
+        /*
+         * 数値型: 整数でも実数でもOK。
+         * 真偽値: true / false の2種類のみ
+         * オブジェクト型 配列 関数 組み込みオブジェクト 自作のクラス
+         * undefined: 未定義型
+         * null: ナル型 ヌル型 何もない
+         */
+
+        data = 23.456;
+        console.log(`data = ${data}`);
+        data = true;
+        console.log(`data = ${data}`);
+
+        let cat = {name: 'タマ', age: 5}; // オブジェクト型: 辞書型 キーバリュー型
+        console.log(`猫情報: 名前 ${cat,name} 年齢 ${cat.age}`);
+
+        // w = 100; // 変数宣言なしで、値を代入、scriptモードなしなら有効
+        // console.log("w = " + w);
+
+        data = null;
+        console.log("data = " + data);
+        data = undefined;
+        console.log("data = " + data);
+        
+    </script>
+
+</body>
+</html>
